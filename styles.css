@@ -1,0 +1,245 @@
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-surface-light: #334155;
+    --color-text: #f8fafc;
+    --color-muted: #cbd5e1;
+    --color-accent: #38bdf8;
+    --color-accent-dark: #0284c7;
+    --color-border: #475569;
+
+    --font-stack: Arial, Helvetica, sans-serif;
+
+    --transition-speed: 200ms;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav > a {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+nav li a:hover {
+    color: var(--color-accent);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 5rem 2rem;
+}
+
+section > h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-bottom: 2rem;
+    color: var(--color-muted);
+    font-size: 1.2rem;
+}
+
+.hero a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition:
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.hero a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    transform: translateY(-2px);
+}
+
+#features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+#features article {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background-color: var(--color-surface);
+}
+
+#features article h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+}
+
+#features article p {
+    color: var(--color-muted);
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.pricing article {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    background-color: var(--color-surface);
+}
+
+.pricing article h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+}
+
+.pricing .featured {
+    border: 2px solid var(--color-accent);
+    transform: scale(1.03);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+}
+
+button {
+    margin-top: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+button:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-2px);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+footer {
+    padding: 2rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    text-align: center;
+}
