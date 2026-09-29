@@ -302,8 +302,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    ...
-    
     .pricing .featured {
         transform: none;
     }
